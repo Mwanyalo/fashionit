@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.auth-container {
+  padding: .5em;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8d8d8;
+
+  .input-wrapper {
+    margin-top: .8em;
+  }
+  
+  label {
+    color: #0466ca;
+    width: 100%;
+  }
+  
+  input {
+    width: 100%;
+    line-height: 1.8em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: #fff;
+    margin: 10px 0;
+  
+    &::placeholder {
+      color: #000;
+    }
+  }
+}
+
+.switch {
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-title {
+  font-weight: $fw-semibold;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 1.4em;
+  text-align: center;
+
+  @include mediaSm {
+    font-size: 1.2em;
+  }
+}

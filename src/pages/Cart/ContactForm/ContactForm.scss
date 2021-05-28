@@ -1,0 +1,40 @@
+@import '../../../index.scss';
+
+.contact-form {
+  max-width: 360px;
+  margin: 0 auto;
+  margin-top: 1.4em;
+
+  @include mediaMd {
+    max-width: 400px;
+    margin-right: 1.6em;
+  }
+
+  label {
+    color: #0466ca;
+    width: 100%;
+  }
+  
+  input {
+    width: 100%;
+    line-height: 1.8em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: #fff;
+    margin: 10px 0;
+  
+    &::placeholder {
+      color: #000;
+    }
+  }
+}
+
+.title {
+  font-size: 1.15em;
+  margin-top: .8em;
+
+  @include mediaMd {
+    font-size: 1.2em;
+  }
+}
