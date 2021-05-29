@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './WishlistItem.scss';
 
-import Button from '../../../shared/Button/Button';
+import Button from '../../shared/Button/Button';
 
 const wishlistItem = (props) => {
   const { id, title, subtitle, img, description, price } = props.item;

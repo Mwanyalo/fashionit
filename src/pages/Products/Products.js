@@ -90,6 +90,7 @@ class Products extends Component {
               <span className='amount'>{fliteredProducts.length}</span>
             </p>
           </div>
+
           <div className='product-list-wrapper'>
             <div className='nav'>
               <SideNavigation filterProducts={filterProducts} />

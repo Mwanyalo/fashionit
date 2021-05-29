@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './OrderSummary.scss';
 
-import Button from '../../../shared/Button/Button';
+import Button from '../../shared/Button/Button';
 
 class OrderSummary extends Component {
   render() {

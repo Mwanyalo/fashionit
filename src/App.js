@@ -12,7 +12,7 @@ import Products from './pages/Products/Products';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Wishlist from './pages/Wishlist/Wishlist';
 import Cart from './pages/Cart/Cart';
-import Orders from './pages/Orders/Orders';
+import Profile from './pages/Profile/Profile';
 import Auth from './pages/Auth/Auth';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
@@ -99,13 +99,13 @@ function App() {
                                       />
                                     )}
                                   />
-                                  {/* <PrivateRoute
-                                    path='/orders'
+                                  <PrivateRoute
+                                    path='/profile'
                                     {...productContext}
                                     {...auth}
                                     {...orderContext}
-                                    component={Orders}
-                                  /> */}
+                                    component={Profile}
+                                  />
                                   <Redirect to='/' />
                                 </Switch>
                               </Layout>

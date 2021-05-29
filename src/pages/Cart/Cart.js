@@ -5,8 +5,8 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import './Cart.scss';
 
 import Button from '../../shared/Button/Button';
-import OrderSummary from './OrderSummary/OrderSummary';
-import ContactForm from './ContactForm/ContactForm';
+import OrderSummary from '../../components/OrderSummary/OrderSummary';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 class Cart extends Component {
   state = {

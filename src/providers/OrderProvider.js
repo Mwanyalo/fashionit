@@ -16,20 +16,25 @@ class OrderProvider extends Component {
         county: '',
         phone: '',
       },
+      orderItems: [],
       loading: false,
       purchased: false,
     };
   }
 
-  fetchOrders = () => {
-    let newOrder = this.state.orders;
-    const uid = localStorage.uid;
+  fetchOrders = async (id) => {
+    let newOrders = this.state.orders;
+    let uid = id;
+    if (!id) {
+      uid = localStorage.uid;
+    }
     if (uid) {
-      db.ref('/users/')
+      await db
+        .ref('/users/')
         .child(uid)
         .on('value', (snapshot) => {
           var v = snapshot.val();
-          newOrder = {
+          newOrders = {
             email: v.email,
             fullName: v.fullName,
             address: v.address,
@@ -40,7 +45,7 @@ class OrderProvider extends Component {
           };
         })
         .bind(this);
-      this.setState({ orders: newOrder }, () => {
+      this.setState({ orders: newOrders }, () => {
         return true;
       });
     }
@@ -52,10 +57,20 @@ class OrderProvider extends Component {
       await this.fetchOrders();
       let orderHistoryObj = this.state.orders.orderHistory;
       if (!orderHistoryObj) orderHistoryObj = {};
+      const today = new Date();
+      const date =
+        today.getFullYear() +
+        '-' +
+        (today.getMonth() + 1) +
+        '-' +
+        today.getDate();
+      const time =
+        today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
       orderHistoryObj[String(Date.now())] = {
-        items: cart.toString(),
+        items: JSON.stringify(cart),
         deliveryFee: delivery,
         totalPrice: totalPrice,
+        createdAt: date + ' ' + time,
       };
       let userRef = db.ref('users/');
       userRef.child(userId).update({

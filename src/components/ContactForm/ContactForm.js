@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ContactForm.scss';
 
-import Button from '../../../shared/Button/Button';
+import Button from '../../shared/Button/Button';
 
 class ContactForm extends Component {
   state = {

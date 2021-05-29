@@ -1,0 +1,25 @@
+.tabs{
+    font-family:arial;
+    margin:0 auto;
+    width:70%;
+    text-align:center;
+    margin-top:15vh;
+  }
+  
+b{
+    font-weight: 600;
+}
+
+  th {
+    font-weight: 600;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

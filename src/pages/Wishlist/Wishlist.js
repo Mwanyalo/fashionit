@@ -2,7 +2,7 @@ import React from 'react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import './Wishlist.scss';
-import WishlistItem from './WishlistItem/WishlistItem';
+import WishlistItem from '../../components/WishlistItem/WishlistItem';
 import Button from '../../shared/Button/Button';
 
 const wishlist = (props) => {

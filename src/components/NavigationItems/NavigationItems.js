@@ -22,11 +22,11 @@ const navigationItems = ({ uid }) => (
     <NavigationItem link='/browse/male' exact>
       Men
     </NavigationItem>
-    {/* {uid ? (
-      <NavigationItem link='/orders' exact>
-        Orders
+    {uid ? (
+      <NavigationItem link='/profile' exact>
+        Profile
       </NavigationItem>
-    ) : null} */}
+    ) : null}
   </ul>
 );
 
